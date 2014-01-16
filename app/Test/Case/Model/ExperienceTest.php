@@ -1,0 +1,56 @@
+<?php
+App::uses('Experience', 'Model');
+
+/**
+ * Experience Test Case
+ *
+ */
+class ExperienceTest extends CakeTestCase {
+
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = array(
+		'app.experience',
+		'app.project',
+		'app.university',
+		'app.parish',
+		'app.city',
+		'app.state',
+		'app.country',
+		'app.beneficiary',
+		'app.beneficiary_type',
+		'app.user',
+		'app.universities_user',
+		'app.problem',
+		'app.document',
+		'app.document_type',
+		'app.career',
+		'app.careers_project',
+		'app.careers_university'
+	);
+
+/**
+ * setUp method
+ *
+ * @return void
+ */
+	public function setUp() {
+		parent::setUp();
+		$this->Experience = ClassRegistry::init('Experience');
+	}
+
+/**
+ * tearDown method
+ *
+ * @return void
+ */
+	public function tearDown() {
+		unset($this->Experience);
+
+		parent::tearDown();
+	}
+
+}
